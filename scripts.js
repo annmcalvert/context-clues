@@ -9,7 +9,6 @@ var weapons = ['chainsaw', 'ninja star', 'hammer', 'toaster', 'samurai sword', '
 
 $(document).ready(function () {
     for (i = 0; i < 100; i++) {
-      
         var accusation = $('<h3>').attr('id', 'header' + i);
         $(document.body).append(accusation);
         $(accusation).text('Accusation ' + (i + 1));
@@ -20,11 +19,9 @@ $(document).ready(function () {
         var friendsModulus = i % 5;
         var locationsModulus = i % 10;
         var weaponsModulus = i % 20;
-       
         $(accusation).click(function () {
             alert('Accusation ' + (i + 1) + ': I accuse ' + friends[friendsModulus] + ', with the ' + weapons[weaponsModulus] + ' in the ' + locations[locationsModulus])
         });
-
     }
 })
 
